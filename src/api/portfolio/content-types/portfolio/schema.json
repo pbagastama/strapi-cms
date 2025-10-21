@@ -36,9 +36,9 @@
     "order": {
       "type": "integer"
     },
-    "techStack": {
+    "tech_stacks": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::skill.skill",
       "inversedBy": "portfolios"
     }

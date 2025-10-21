@@ -20,9 +20,15 @@
     },
     "portfolios": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "api::portfolio.portfolio",
-      "mappedBy": "techStack"
+      "mappedBy": "tech_stacks"
+    },
+    "works": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::work.work",
+      "mappedBy": "skills"
     }
   }
 }
