@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "works",
+  "info": {
+    "singularName": "work",
+    "pluralName": "works",
+    "displayName": "Work"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "position": {
+      "type": "string"
+    },
+    "company_name": {
+      "type": "string"
+    },
+    "company_website": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "start_date": {
+      "type": "date"
+    },
+    "end_date": {
+      "type": "date"
+    },
+    "is_current": {
+      "type": "boolean"
+    },
+    "order": {
+      "type": "integer"
+    },
+    "skills": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::skill.skill",
+      "inversedBy": "works"
+    }
+  }
+}
